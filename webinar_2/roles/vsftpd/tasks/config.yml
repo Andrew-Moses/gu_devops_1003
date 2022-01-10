@@ -1,0 +1,12 @@
+---
+
+- name: Config vsftpd and static files
+  block:
+    - name: update vsftpd config
+      template:
+        src: vsftpd.conf
+        dest: /etc/vsftpd/vsftpd.conf
+        owner: root
+      notify:
+        - reload vsftpd
+

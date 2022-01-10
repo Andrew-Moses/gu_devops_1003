@@ -1,6 +1,6 @@
 ---
 
-root_dir: "/data1/nginx/html"
+root_dir: "/home/ftp"
 
 deploy_user:
   name: deploy_user
