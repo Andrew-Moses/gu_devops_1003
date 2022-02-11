@@ -1,5 +1,7 @@
 root_dir: "/data/nginx/html"
 
+domain: office.local
+
 product: "lenovo"
 city: "home"
 provider: "local"
@@ -33,3 +35,18 @@ prometheus:
   log: /var/log/prometheus/prometheus.log
   storage: /home/prometheus/data
   retention_time: 180d
+
+ntp:
+  servers:
+    - 10.10.18.23
+    - 2.asia.pool.ntp.org
+    - 3.asia.pool.ntp.org
+
+project:
+  name_path: /opt/poll
+  name: pollme
+  repo: https://github.com/devmahmud/Django-Poll-App.git
+
+gunicorn_default:
+  port: 9999
+  workers: 5
